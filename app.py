@@ -74,12 +74,20 @@ with st.container():
             # 特征1: Gestational age (胎龄)
             gestational_age = st.number_input(
                 'Gestational Age (weeks)', 
-                value=36.0, 
+                value=38.0, 
                 step=0.1,
                 help='Newborn\'s gestational age'
             )
             
-            # 特征2:  C-Reactive Protein (C反应蛋白水平)
+       # 特征2: Apgar 5 min (Apgar评分5分钟)
+            apgar_1min = st.number_input(
+                'Apgar Score (5 min)', 
+                value=8, 
+                step=1,
+                help='Newborn\'s Apgar score at 5 minute'
+            )
+
+            # 特征3:  C-Reactive Protein (C反应蛋白水平)
              C-Reactive Protein = st.number_input(
                 ' C-Reactive Protein (mg/L)', 
                 value=5.0, 
@@ -87,7 +95,7 @@ with st.container():
                 help='Newborn\'s  C-Reactive Protein'
             )
             
-            # 特征3: Receipt of Endotracheal Intubation (接受气管插管)
+            # 特征4: Receipt of Endotracheal Intubation (接受气管插管)
             rds = st.selectbox(
                 'Receipt of Endotracheal Intubation', 
                 [0, 1], 
@@ -95,7 +103,7 @@ with st.container():
                 help='Whether the newborn received endotracheal intubation'
             )
             
-            # 特征4: Use of Catecholamines (使用儿茶酚胺类药物)
+            # 特征5: Use of Catecholamines (使用儿茶酚胺类药物)
             rds = st.selectbox(
                 'Use of Catecholamines ', 
                 [0, 1], 
@@ -103,14 +111,8 @@ with st.container():
                 help='Whether the newborn used  catecholamines '
             )
         
-        with col2:
-            # 特征5: Apgar 5 min (Apgar评分5分钟)
-            apgar_1min = st.number_input(
-                'Apgar Score (5 min)', 
-                value=8, 
-                step=1,
-                help='Newborn\'s Apgar score at 5 minute'
-            )
+
+     
             
             
             
